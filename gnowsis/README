@@ -1,0 +1,9 @@
+gnoclient.jar is in the gnowsis/lib/ directory of
+    http://www.gnowsis.org/statisch/download/gnowsis_0.8.1.zip
+
+I made remotebrowser.jar myself by zipping up a couple of classes
+which are also distributed in the download above. The org.gnowsis...
+classes are in gnowsis/classes/org/gnowsis/..., and the
+de.dfki... class is in the JAR file
+gnowsis/import/epos_shared/dfki_common/DFKIUtils2.jar.
+(The source for that class is also in the JAR file, if you were looking.)
