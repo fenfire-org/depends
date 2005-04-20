@@ -1,0 +1,20 @@
+--- src/javolution/realtime/Context.java.old	2005-04-20 19:49:21.209783144 +0300
++++ src/javolution/realtime/Context.java	2005-04-20 19:49:02.288659592 +0300
+@@ -217,7 +217,7 @@
+     protected static Context push(Class contextClass) {
+         Context current = Context.currentContext();
+         Context ctx = current._inner;
+-        if (contextClass.isInstance(ctx)) {
++        if (ctx != null && ctx.getClass() == contextClass) {
+             // All fields members are correctly set.
+             synchronized (Context.LOCK) {
+                 Context.ThreadToContext.put(ctx._owner, ctx);
+@@ -227,7 +227,7 @@
+         // Searches inner stack.
+         while (ctx != null) {
+             ctx = ctx._inner;
+-            if (contextClass.isInstance(ctx)) { // Found one.
++	    if (ctx != null && ctx.getClass() == contextClass) { // Found one.
+                 // Detaches.
+                 Context next = ctx._inner;
+                 ctx._outer._inner = next;

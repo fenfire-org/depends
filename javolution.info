@@ -1,5 +1,12 @@
 URI: http://javolution.org/
-Version: Javolution Version 3.0.8 - March 3, 2005
+Version: Based on Javolution Version 3.2.5 - April 16, 2005
+         A small patch was applied, see javolution.patch
 
-Binary link: http://javolution.org/javolution-3.0.8-bin.zip
-Source link: http://javolution.org/javolution-3.0.8-src.zip
+Source link: http://www.javolution.org/javolution-3.2.5-src.zip
+
+To create our javolution.jar:
+
+- Download the source from the above link.
+- Unzip.
+- Apply javolution.patch.
+- Compile with 'ant 1.4'
